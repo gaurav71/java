@@ -7,6 +7,10 @@ public class TypeConversions {
         return str;
     }
 
+    String charToString(char ch) {
+        return String.valueOf(ch);
+    }
+
     int stringToInt(String str) {
         return Integer.valueOf(str);
     }

@@ -1,42 +1,48 @@
 package lambdas;
 
 import java.util.ArrayList;
-import java.util.function.Predicate;
+import java.util.List;
 
-class EnhancedList<T> extends ArrayList<T> {
-    EnhancedList<T> filter(FilterCondition<T> filterCondition) {
-        EnhancedList<T> filteredList = new EnhancedList<>();
+public class EnhancedList {
+    private List<Integer> data;
 
-        for (T item : this) {
-            if (filterCondition.check(item)) {
-                filteredList.add(item);
+    EnhancedList() {
+        this.data = new ArrayList<>();
+    }
+
+    EnhancedList(List<Integer> data) {
+        this.data = data;
+    }
+
+    public List<Integer> getData() {
+        return data;
+    }
+
+    public void forEach(Consumer consumer) {
+        for (int i=0; i<data.size(); i++) {
+            consumer.accept(data.get(i));
+        }
+    }
+
+    public List<Integer> filter(Predicate predicate) {
+        List<Integer> filteredList = new ArrayList<>();
+
+        for (int i=0; i<data.size(); i++) {
+            if (predicate.test((data.get(i)))) {
+                filteredList.add(data.get(i));
             }
         }
 
         return filteredList;
     }
 
-    // Predicate interface already provided by java
-    EnhancedList<T> filterPredicate(Predicate<T> filterCondition) {
-        EnhancedList<T> filteredList = new EnhancedList<>();
+    public List<Integer> map(Function function) {
+        List<Integer> result = new ArrayList<>();
 
-        for (T item : this) {
-            if (filterCondition.test(item)) {
-                filteredList.add(item);
-            }
+        for (int i=0; i<data.size(); i++) {
+            result.add(function.apply((data.get(i))));
         }
 
-        return filteredList;
-    }
-
-    EnhancedList<T> map(MapCallback<T> mapCallback) {
-        EnhancedList<T> list = new EnhancedList<>();
-
-        for (T item : this) {
-            T newItem = mapCallback.mapper(item);
-            list.add(newItem);
-        }
-
-        return list;
+        return result;
     }
 }

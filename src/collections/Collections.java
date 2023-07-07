@@ -61,6 +61,7 @@ public class Collections {
            arrayList.set(i, arrayList.get(i));
         }
 
+
         List<Integer> arrayListCopy = new ArrayList<>(arrayList); // creates new array in memory
         arrayListCopy.add(30);
 
@@ -241,7 +242,7 @@ public class Collections {
 
         /****************************************   SET   ***************************************/
 
-        Set<Integer> mySet = new HashSet<>(arrayList);
+        Set<Integer> mySet = new HashSet<>();
         mySet.add(1);
         mySet.add(18);
         mySet.add(18);

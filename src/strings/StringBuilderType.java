@@ -7,6 +7,8 @@ public class StringBuilderType {
         builder.append(" new world");
         builder.insert(5, ", brother");
         builder.delete(0, 5);
+        builder.setCharAt(2, 'h');
+        builder.deleteCharAt(3);
         builder.reverse();
         String str = builder.toString();
     }

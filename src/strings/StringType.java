@@ -2,6 +2,9 @@ package strings;
 import java.util.*;
 
 public class StringType {
+    public static String reverseString(String str) {
+        return new StringBuilder(str).reverse().toString();
+    }
 
     public static void useFulMethods() {
         String string = "hello there";
@@ -13,6 +16,7 @@ public class StringType {
         string = string.concat(" you");
         System.out.println(string);
 
+        // endindex is not included
         String sub = string.substring(0,5);
         System.out.println(sub);
 
@@ -24,6 +28,7 @@ public class StringType {
     public static void chars() {
         char ch = 'a';
         System.out.println(ch);
+
 
         // int is bigger type than char. char can be stored in int without explicit casting
         int val = ch;

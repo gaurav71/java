@@ -26,7 +26,7 @@ public class Collections {
     */
 
     // Iterable interface is implemented for making the collections iterable
-    // Collection interface provides some common methods to be implemented by the implementing classes
+    // Collection interface provides some common methods to be implemented by the implementing oops.classes
 
     //Programming to an interface is saying, "I need this functionality and I don't care where it comes from."
     //We usually need only methods mentioned in the list interface for our functionality

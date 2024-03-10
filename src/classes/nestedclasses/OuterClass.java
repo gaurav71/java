@@ -4,6 +4,10 @@ package classes.nestedclasses;
 * Nested Classes are of 2 types:
 *   Nested Static Classes: can access static attributes of outer class
 *   Inner Classes: can access all attributes of outer class;
+*
+*   Every attribute of inner class object is accessible in outer class
+*   Every attribute of outer class object is accessible in inner class
+*
 * */
 
 public class OuterClass {
@@ -43,6 +47,7 @@ public class OuterClass {
 
         // Nested class can access attributes of outer class (same way any other outer method would)
         private void outerClassAttributeAccess() {
+            OuterClass outerClass = new OuterClass();
             System.out.println(outerClassPrivateVal);
             System.out.println(outerClassStaticVal);
         }

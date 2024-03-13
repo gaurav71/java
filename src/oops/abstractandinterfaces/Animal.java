@@ -15,6 +15,7 @@ public interface Animal {
         System.out.println("Default method");
     }
 
+    // only available for Interface. Will not be available on the implementing class or object of such class
     public static void staticMethod() {
         System.out.println(value);
         System.out.println("Static method");

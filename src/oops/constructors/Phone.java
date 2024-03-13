@@ -10,7 +10,7 @@ public class Phone {
     private int cameraSpecs;
     private int price;
 
-    // The compiler automatically provides a no-argument, default constructor for any class without introtooops.constructors
+    // The compiler automatically provides a no-argument, default constructor for any class without constructors
     // when an object is created, all the attributes will have the default value unless overwritten in the constructor
     // The default constructor will not be created for the class if there is even a single explicit constructor
 

@@ -10,6 +10,7 @@ public class StringBuilderType {
         builder.setCharAt(2, 'h');
         builder.deleteCharAt(3);
         builder.reverse();
+        builder.setLength(4);
         String str = builder.toString();
     }
 }
